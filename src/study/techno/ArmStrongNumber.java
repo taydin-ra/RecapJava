@@ -1,0 +1,27 @@
+package study.techno;
+
+public class ArmStrongNumber {
+    public static void main(String[] args) {
+      boolean myNum=isCubesAreTheNumber(153);
+        System.out.println(myNum);
+    }
+
+    public static boolean isCubesAreTheNumber(int number) {
+
+        int sum = 0;
+        while (number > 0) {
+
+            int remainder = number % 10;
+            sum += remainder * remainder * remainder;
+
+            number /= 10;
+        }
+
+        if (sum == number) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+}
