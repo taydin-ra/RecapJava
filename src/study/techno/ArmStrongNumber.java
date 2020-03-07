@@ -9,12 +9,13 @@ public class ArmStrongNumber {
     public static boolean isCubesAreTheNumber(int number) {
 
         int sum = 0;
-        while (number > 0) {
+        int originalNum=number;
+        while (originalNum > 0) {
 
-            int remainder = number % 10;
+            int remainder = originalNum % 10;
             sum += remainder * remainder * remainder;
 
-            number /= 10;
+            originalNum /= 10;
         }
 
         if (sum == number) {
